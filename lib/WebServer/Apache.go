@@ -1,17 +1,16 @@
 package WebServer
 
 import (
-"net"
-"strings"
-"io/ioutil"
-"time"
-"github.com/takuzoo3868/goShaula/lib"
+	"net"
+	"strings"
+	"io/ioutil"
+	"time"
+	"github.com/takuzoo3868/goShaula/lib"
 )
 
 type ApachePredictor struct {
 	*lib.BaseHttpPredictor
 }
-
 
 func (p *ApachePredictor) Predict(host string) string {
 	duration, _ := time.ParseDuration("3s")
@@ -48,4 +47,3 @@ func (p *ApachePredictor) PredictResponseDetail(resp string) string {
 	}
 	return ""
 }
-
