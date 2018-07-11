@@ -1,11 +1,11 @@
 package WebServer
 
 import (
+	"github.com/takuzoo3868/goShaula/lib"
+	"io/ioutil"
 	"net"
 	"strings"
-	"io/ioutil"
 	"time"
-	"github.com/takuzoo3868/goShaula/lib"
 )
 
 type ApachePredictor struct {

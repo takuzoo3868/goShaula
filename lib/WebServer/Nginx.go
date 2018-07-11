@@ -1,23 +1,23 @@
 package WebServer
 
 import (
-	"net"
+	"github.com/takuzoo3868/goShaula/lib"
 	"io/ioutil"
+	"net"
 	"strings"
 	"time"
-	"github.com/takuzoo3868/goShaula/lib"
 	//"fmt"
 )
 
 type NginxPredictor struct {
-	lib.BaseHttpPredictor
+	*lib.BaseHttpPredictor
 }
 
 func (p *NginxPredictor) Predict(host string) string {
 	duration, _ := time.ParseDuration("3s")
 
 	tcpAddr, err := net.ResolveTCPAddr("tcp4", host)
-	if (err != nil) {
+	if err != nil {
 		return ""
 	}
 

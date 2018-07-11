@@ -2,10 +2,10 @@ package main
 
 import (
 	"fmt"
-	"net"
-	"time"
 	"log"
+	"net"
 	"strconv"
+	"time"
 )
 
 var (

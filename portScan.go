@@ -214,7 +214,7 @@ func main() {
 	// 開放されているPort番号を取得
 	fmt.Printf("scannimg port %d-%d...\n", 20, 30000)
 
-	opendPorts := ps.GetOpenedPort(20,30000)
+	opendPorts := ps.GetOpenedPort(20, 30000)
 
 	for i := 0; i < len(opendPorts); i++ {
 		port := opendPorts[i]
